@@ -967,3 +967,10 @@ static void * KVOContext = &KVOContext;
 }
 
 @end
+
+@implementation UIScrollView (NoBounce)
+- (void)didMoveToWindow {
+    [super didMoveToWindow];
+    self.bounces = NO;
+}
+@end
